@@ -5,20 +5,21 @@ aliases: []
 tags: []
 data: {}
 variants:
-- slug: supervisor
-- slug: "{{this.data.arch}}-supervisor"
-  data:
-    docker_tag: v{{this.componentVersion}}
-  variants:
-  - data:
-      arch: amd64
-  - data:
-      arch: armv7hf
-  - data:
-      arch: rpi
-  - data:
-      arch: aarch64
-  - data:
-      arch: i386
-  - data:
-      arch: i386-nlp
+  - slug: supervisor
+  - slug: '{{this.data.arch}}-supervisor'
+    data:
+      docker_tag: 'v{{this.componentVersion}}'
+    variants:
+      - data:
+          arch: amd64
+      - data:
+          arch: armv7hf
+      - data:
+          arch: rpi
+      - data:
+          arch: aarch64
+      - data:
+          arch: i386
+      - data:
+          arch: i386-nlp
+componentVersion: v1.1.0

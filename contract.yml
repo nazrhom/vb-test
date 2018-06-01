@@ -1,9 +1,24 @@
-slug: "fuzzy-fortnight"
-type: "meta-test"
-version: "1"
-name: "fuzzy fortnight"
+type: sw.supervisor
+name: Resin supervisor
+version: '1'
 aliases: []
 tags: []
-data:
-  test: 3
-  path: "./path-to-file"
+data: {}
+variants:
+- slug: supervisor
+- slug: "{{this.data.arch}}-supervisor"
+  data:
+    docker_tag: v{{this.componentVersion}}
+  variants:
+  - data:
+      arch: amd64
+  - data:
+      arch: armv7hf
+  - data:
+      arch: rpi
+  - data:
+      arch: aarch64
+  - data:
+      arch: i386
+  - data:
+      arch: i386-nlp

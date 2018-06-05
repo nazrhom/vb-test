@@ -1,0 +1,13 @@
+{
+	"componentVersion": "v1.2.2",
+	"type": "sw.supervisor",
+	"name": "resinio supervisor",
+	"version": "1",
+	"aliases": [],
+	"tags": [],
+	"data": {
+		"docker_tag": "vv1.2.2",
+		"arch": "armv7hf"
+	},
+	"slug": "armv7hf-supervisor"
+}

@@ -22,4 +22,4 @@ variants:
           arch: i386
       - data:
           arch: i386-nlp
-componentVersion: v1.1.0
+componentVersion: v1.2.0

@@ -1,0 +1,13 @@
+{
+	"componentVersion": "v1.2.1",
+	"type": "sw.supervisor",
+	"name": "Resinio supervisor",
+	"version": "1",
+	"aliases": [],
+	"tags": [],
+	"data": {
+		"docker_tag": "vv1.2.1",
+		"arch": "i386-nlp"
+	},
+	"slug": "i386-nlp-supervisor"
+}

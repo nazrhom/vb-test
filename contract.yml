@@ -1,3 +1,4 @@
+componentVersion: v1.2.1
 type: sw.supervisor
 name: Resinio supervisor
 version: '1'
@@ -22,4 +23,3 @@ variants:
           arch: i386
       - data:
           arch: i386-nlp
-componentVersion: v1.2.0

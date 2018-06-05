@@ -1,4 +1,4 @@
-componentVersion: v1.2.1
+componentVersion: v1.2.2
 type: sw.supervisor
 name: resinio supervisor
 version: '1'

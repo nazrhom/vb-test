@@ -1,0 +1,13 @@
+{
+	"componentVersion": "v1.5.0",
+	"type": "sw.supervisor",
+	"name": "Resinio supervisor",
+	"version": "1",
+	"aliases": [],
+	"tags": [],
+	"data": {
+		"docker_tag": "vv1.5.0",
+		"arch": "rpi"
+	},
+	"slug": "rpi-supervisor"
+}

@@ -1,0 +1,13 @@
+{
+	"componentVersion": "v1.5.2",
+	"type": "sw.supervisor",
+	"name": "Resinio supervisor",
+	"version": "1",
+	"aliases": [],
+	"tags": [],
+	"data": {
+		"docker_tag": "vv1.5.2",
+		"arch": "amd64"
+	},
+	"slug": "amd64-supervisor"
+}

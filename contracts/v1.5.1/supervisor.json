@@ -1,0 +1,10 @@
+{
+	"componentVersion": "v1.5.1",
+	"type": "sw.supervisor",
+	"name": "resinio supervisor",
+	"version": "1",
+	"aliases": [],
+	"tags": [],
+	"data": {},
+	"slug": "supervisor"
+}

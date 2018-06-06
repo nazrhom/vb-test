@@ -1,6 +1,6 @@
-componentVersion: v1.5.0
+componentVersion: v1.5.1
 type: sw.supervisor
-name: Resinio supervisor
+name: resinio supervisor
 version: '1'
 aliases: []
 tags: []

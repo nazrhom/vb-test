@@ -1,23 +1,35 @@
-# bin/#!/usr/bin/env bash
-
+#!/bin/sh
 set -eu
+
+cd supervisor-repo
 
 # File separator set to \n.
 # N.B. This will be valid for the whole script
 IFS=$'\n'
 
 regex='([[:print:]]*)*change-type:[[:space:]]*(minor|major|patch)($|[[:print:]]*)'
-echo $regex
-function getIncrement() {
-  echo $1
-  if [[ $1 =~ $regex ]]
+FINAL_INCREMENT='patch'
+
+function mbUpdateIncrement() {
+  if [[ $FINAL_INCREMENT == "minor" && $1 == 'major' ]]
   then
-    echo "${BASH_REMATCH[2]}"
-  else
-    echo "No match"
+  FINAL_INCREMENT=$1
+elif [[ $FINAL_INCREMENT == "patch" ]]
+  then
+  FINAL_INCREMENT=$1
   fi
 }
 
+function getIncrement() {
+  if [[ $1 =~ $regex ]]
+  then
+    mbUpdateIncrement "${BASH_REMATCH[2]}"
+  else
+    echo "Error: No match"
+    exit 1
+  fi
+}
+echo `git branch`
 # Show all commits on the current branch that are not on master
 for commit in `git cherry master`
 do
@@ -30,14 +42,15 @@ do
   fi
   # The rest of the string is the SHA of the commit
   SHA=${commit:2}
-  # Show message and author with formatting
-  t=`git show $SHA -s --format=%B`
+  # Show commit body
+  body=`git show $SHA -s --format=%B`
 
   # Check for incement, will set FINAL_INCREMENT if it finds a footer
   # tag with value greater than the current FINAL_INCREMENT. It will
   # error if not tag is found
-  getIncrement `echo $t | tr [:upper:] [:lower:]`
+  getIncrement `echo $body | tr [:upper:] [:lower:]`
 done
+echo $FINAL_INCREMENT
 
 
 

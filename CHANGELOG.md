@@ -51,3 +51,4 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## v1.0.0 - 2018-05-28
 
 * Updated contract [Giovanni Garufi]
+test

@@ -1,4 +1,4 @@
-componentVersion: 1.5.3
+componentVersion: 1.5.8
 type: sw.supervisor
 name: resinio Supervisor
 version: '1'

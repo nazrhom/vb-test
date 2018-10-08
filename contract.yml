@@ -1,25 +1,6 @@
-componentVersion: 1.5.8
-type: sw.supervisor
-name: resinio Supervisor
-version: '1'
+type: test.contract
+name: test contract
 aliases: []
 tags: []
-data: {}
-variants:
-  - slug: supervisor
-  - slug: '{{this.data.arch}}-supervisor'
-    data:
-      docker_tag: 'v{{this.componentVersion}}'
-    variants:
-      - data:
-          arch: amd64
-      - data:
-          arch: armv7hf
-      - data:
-          arch: rpi
-      - data:
-          arch: aarch64
-      - data:
-          arch: i386
-      - data:
-          arch: i386-nlp
+data:
+  property: 1
